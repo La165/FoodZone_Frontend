@@ -1,0 +1,150 @@
+/* .reg-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eef2f3;
+}
+
+.reg-form {
+  width: 380px;
+  padding: 25px;
+  background: white;
+  box-shadow: 0px 0px 10px #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.reg-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.reg-form input,
+.reg-form textarea {
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.reg-form textarea {
+  height: 80px;
+  resize: none;
+}
+
+.reg-form button {
+  margin-top: 15px;
+  padding: 10px;
+  background: #4a90e2;
+  border: none;
+  font-size: 16px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reg-form button:disabled {
+  background: gray;
+}
+
+.success {
+  color: green;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: -5px;
+}
+
+.info {
+  color: blue;
+  text-align: center;
+} */
+
+
+/* Full-screen perfect center */
+.reg-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eef2f3;
+}
+
+/* Form box */
+.reg-form {
+  width: 380px;
+  padding: 25px;
+  background: white;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.reg-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Inputs */
+.reg-form input,
+.reg-form textarea {
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.reg-form textarea {
+  height: 80px;
+  resize: none;
+}
+
+/* Button */
+.reg-form button {
+  margin-top: 15px;
+  padding: 10px;
+  background: #4a90e2;
+  border: none;
+  font-size: 16px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.reg-form button:hover {
+  background: #1f6ad1;
+}
+
+.reg-form button:disabled {
+  background: gray;
+}
+
+/* Messages */
+.success {
+  color: green;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: -5px;
+}
+
+.info {
+  color: blue;
+  text-align: center;
+}

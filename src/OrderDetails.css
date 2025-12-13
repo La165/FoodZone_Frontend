@@ -1,0 +1,275 @@
+/* OrderDetails.css
+
+/* Container for the entire page 
+.order-details-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+/* Page heading 
+.order-details-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Order ID box 
+.order-id-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e0f7fa;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.order-id-box button {
+  padding: 5px 12px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.order-id-box button:hover {
+  background-color: #004d40;
+}
+
+/* Items section 
+.items-section {
+  margin-bottom: 25px;
+}
+
+.items-section h4 {
+  margin-bottom: 15px;
+  color: #00796b;
+}
+
+/* Each item row 
+.item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Item image 
+.order-item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+/* Items text 
+.item-row span {
+  flex: 1;
+  margin-left: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Bill summary card 
+.bill-summary-card {
+  background-color: #fff3e0;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.bill-summary-card h4 {
+  margin-bottom: 10px;
+  color: #e65100;
+}
+
+.bill-summary-card p {
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+/* Delivery section 
+.delivery-section {
+  background-color: #e8f5e9;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.delivery-section p {
+  margin: 8px 0;
+  font-size: 15px;
+  color: #2e7d32;
+  font-weight: 500;
+} */
+
+
+/* Container */
+.order-details-page {
+  max-width: 950px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #f7f4f4;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading */
+.order-details-page h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 700;
+}
+
+/* Order ID */
+.order-id-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #bde9e7;
+  padding: 12px 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #00695c;
+}
+
+.order-id-box button {
+  padding: 6px 14px;
+  background: #00796b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.order-id-box button:hover {
+  background: #004d40;
+}
+
+/* Items section */
+.items-section {
+  margin-bottom: 30px;
+}
+
+.items-section h4 {
+  margin-bottom: 15px;
+  color: #00796b;
+  font-weight: 600;
+}
+
+/* Each item row */
+.item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  padding: 12px 18px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+  transition: 0.2s;
+}
+
+.item-row:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* Item image */
+.order-item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+/* Item text */
+.item-row span {
+  flex: 1;
+  margin-left: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.item-name {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Bill summary card */
+.bill-summary-card {
+  background: #fff8e1;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.bill-summary-card h4 {
+  margin-bottom: 12px;
+  color: #f7981c;
+}
+
+.bill-summary-card p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+.total-amount {
+  font-size: 17px;
+  color: #388e3c;
+  font-weight: 700;
+}
+
+/* Delivery section */
+.delivery-section {
+  background: #e8f5e9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.delivery-section h4 {
+  color: #2e7d32;
+  margin-bottom: 12px;
+}
+
+.delivery-section p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+/* Status labels */
+.status {
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.status.pending {
+  background-color: #ff9800;
+}
+.status.completed {
+  background-color: #4caf50;
+}
+.status.cancelled {
+  background-color: #f44336;
+}

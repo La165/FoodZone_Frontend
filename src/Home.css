@@ -1,0 +1,634 @@
+/* -------- PARALLAX HERO --------
+.parallax-hero {
+  height: 85vh;
+  background-image: url("/images/home.jpg"); /* change to your hero image */
+  /*background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.hero-content p {
+  margin-top: 10px;
+  font-size: 1.3rem;
+}
+
+.hero-btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 12px 28px;
+  background: #ff4d4d;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #cc0000;
+}
+
+/* -------- CATEGORY SECTION -------- 
+.categories {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+}*/
+
+/* GRID 
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 10px;
+}
+
+/* CARD STYLE 
+.menu-card {
+  background: white;
+  border-radius: 16px;
+  padding: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.menu-card img {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.menu-card h5 {
+  margin: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* -------- RESPONSIVE (MOBILE FRIENDLY) -------- 
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .hero-btn {
+    padding: 10px 22px;
+  }
+} */
+
+/*zomato code
+/* GLOBAL STYLING 
+.homepage {
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+}
+
+/* -------------------------------------------
+   HERO SECTION
+------------------------------------------- 
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 8%;
+  background: #fff7e6;
+  border-bottom: 3px solid #ffe0b3;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.3;
+}
+
+.hero-text p {
+  margin: 15px 0;
+  font-size: 20px;
+  color: #555;
+}
+
+.explore-btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background: #ff6600;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: #cc5200;
+}
+
+.hero-image img {
+  width: 420px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Floating animation 
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* -------------------------------------------
+   CATEGORY SLIDER
+------------------------------------------- 
+.category-section {
+  padding: 50px 8%;
+}
+
+.category-section h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.category-slider {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.category-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.category-slider::-webkit-scrollbar-thumb {
+  background: #ff6600;
+  border-radius: 10px;
+}
+
+.category-card {
+  min-width: 120px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.category-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.category-card img:hover {
+  transform: scale(1.1);
+}
+
+.category-card p {
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* -------------------------------------------
+   TOP RESTAURANTS
+------------------------------------------- 
+.top-restaurants {
+  padding: 50px 8%;
+}
+
+.top-restaurants h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.restaurants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.restaurant-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-5px);
+}
+
+.restaurant-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.restaurant-card h4 {
+  font-size: 18px;
+  margin: 10px 5px;
+  font-weight: 600;
+}
+
+.rest-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px 10px;
+  color: #444;
+  font-size: 14px;
+}
+
+/* -------------------------------------------
+   OFFER BANNERS
+------------------------------------------- 
+.offer-section {
+  padding: 50px 8%;
+}
+
+.offer-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.offers-grid img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.20);
+  transition: 0.3s;
+}
+
+.offers-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* -------------------------------------------
+   TOP PICKS SECTION
+------------------------------------------- 
+.top-picks {
+  padding: 50px 8%;
+}
+
+.top-picks h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.picks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.pick-card {
+  text-decoration: none;
+  color: #333;
+}
+
+.pick-card img {
+  width: 100%;
+  height: 160px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.pick-card img:hover {
+  transform: scale(1.05);
+}
+
+.pick-card h4 {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* -------------------------------------------
+   RESPONSIVE DESIGN
+------------------------------------------- 
+@media(max-width: 900px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-image img {
+    width: 300px;
+    margin-top: 20px;
+  }
+}
+
+
+
+/*new code .category-slider::-webkit-scrollbar/* ---------- GLOBAL ---------- */
+.home-page {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* ---------- PARALLAX HERO ---------- */
+.parallax-hero {
+  height: 90vh;
+  background: url("/images/home.jpg") center/cover fixed;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+  position: relative;
+  color: #fff;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.hero-btn {
+  background: #ff9f1c;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  color: #fff;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.hero-btn:hover {
+  background: #e88400;
+  color: #fff;
+}
+
+/* ---------- ABOUT SECTION ---------- */
+.about-section {
+  padding: 70px 20px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.about-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.about-section p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.about-cards {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.about-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 260px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ---------- MENU CATEGORIES ---------- */
+.categories {
+  padding: 50px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 25px;
+  padding: 0 30px;
+}
+
+.menu-card {
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.menu-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.menu-card h5 {
+  margin: 12px 0;
+  font-weight: 600;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ---------- POPULAR ITEMS ---------- */
+.popular-section {
+  padding: 60px 20px;
+  background: #fff9ec;
+  text-align: center;
+}
+
+.popular-grid {
+  display: flex;
+  gap: 25px;
+  margin-top: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.popular-card {
+  width: 260px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.popular-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.popular-card h4 {
+  padding: 15px;
+  font-size: 1.1rem;
+}
+
+.popular-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ---------- OFFER BANNER ---------- */
+.offer-banner {
+  background: linear-gradient(to right, #f83600, #fe8c00);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 0;
+  margin: 50px 0;
+}
+
+.offer-banner h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.offer-banner p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+/* ---------- TESTIMONIALS ---------- */
+.testimonials {
+  padding: 70px 20px;
+  background: #f3faff;
+  text-align: center;
+}
+
+.test-grid {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.test-card {
+  width: 280px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+  font-style: italic;
+  transition: 0.3s;
+}
+
+.test-card:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- CONTACT STRIP ---------- */
+.contact-strip {
+  background: #1f1f1f;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-strip h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.contact-strip p {
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .parallax-hero {
+    height: 70vh;
+  }
+}
