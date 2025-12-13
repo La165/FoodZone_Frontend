@@ -51,8 +51,9 @@ function AppRoutes() {
       <Route path="/soups" element={<Soups />} />
       <Route path="/bakery" element={<Bakery />} />
       <Route path="/contactus" element={<ContactUs />} />
+
       
-      {/* 🔐 PROTECTED ROUTES */}
+      {/* 🔐 PROTECTED ROUTES */}  
       <Route
         path="/cart"
         element={
