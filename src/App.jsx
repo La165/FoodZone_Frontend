@@ -15,7 +15,7 @@ import Cart from "./Cart";
 import Breakfast from "./Breakfast";
 import Snacks from "./Snacks";
 import ContactUs from "./ContactUs";
-import FastFood from "./Fastfood";
+import FastFood from "./FastFood";
 import Soups from "./Soups";
 import Bakery from "./Bakery";
 import Orders from "./Orders";
