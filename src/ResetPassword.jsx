@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import axiosInstance from "./axiosInstance";
 
 const ResetPassword = () => {
   const [searchParams] = useSearchParams();
@@ -35,7 +36,7 @@ const ResetPassword = () => {
     try {
       setLoading(true);
 
-      const res = await fetch("http://localhost:3000/api/v1/products/reset-password", {
+      const res = await axiosInstance.post("/reset-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, token, password }),

@@ -171,7 +171,7 @@ export const registerUserThunk = createAsyncThunk(
   "auth/registerUser",
   async (userData, { rejectWithValue }) => {
     try {
-      const response = await axios.post("http://localhost:3000/api/v1/products/register", userData);
+      const response = await axiosInstance.post("/register", userData);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response?.data || "Server Error");
@@ -700,8 +700,8 @@ export const loginUserThunk = createAsyncThunk(
   "login/loginUser",
   async (userData, { rejectWithValue }) => {
     try {
-      const response = await axios.post(
-        "http://localhost:3000/api/v1/products/login",
+      const response = await axiosInstance.post(
+        "/login",
         userData
       );
       return response.data; // Your backend already sends: status, message, user, token
@@ -752,8 +752,8 @@ export const forgotPasswordThunk = createAsyncThunk(
   "auth/forgotPassword",
   async (email, { rejectWithValue }) => {
     try {
-      const response = await axios.post(
-        "http://localhost:3000/api/v1/products/forgot-password",
+      const response = await axiosInstance.post(
+        "/forgot-password",
         { email }
       );
       return response.data.message;
@@ -767,8 +767,8 @@ export const resetPasswordThunk = createAsyncThunk(
   "auth/resetPassword",
   async ({ email, token, password }, { rejectWithValue }) => {
     try {
-      const response = await axios.post(
-        "http://localhost:3000/api/v1/products/reset-password",
+      const response = await axiosInstance.post(
+        "/reset-password",
         { email, token, password }
       );
       return response.data.message;

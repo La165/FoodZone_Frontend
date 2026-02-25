@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axiosInstance from "./axiosInstance";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -17,7 +18,7 @@ const ForgotPassword = () => {
       setLoading(true);
       setMessage("");
 
-      const res = await fetch("http://localhost:3000/api/v1/products/forgot-password", {
+      const res = await axiosInstance.post("/forgot-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
