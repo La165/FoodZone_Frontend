@@ -561,11 +561,12 @@ function Cart() {
                 const orderData = {
                   userId: user.id,
                   items: cartItems.map(
-                    ({ id, name, price, quantity }) => ({
+                    ({ id, name, price, quantity,image }) => ({
                       id,
                       name,
                       price,
                       quantity,
+                      image
                     })
                   ),
                   totalMRP: totalPrice,
