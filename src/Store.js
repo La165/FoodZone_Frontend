@@ -1,5 +1,5 @@
 import { configureStore, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+//import axios from "axios";
 
 import { coupons } from "./Coupon";
 import axiosInstance from "./axiosInstance";
