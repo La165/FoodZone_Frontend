@@ -1,3 +1,4 @@
+// ResetPassword.jsx
 import React, { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import axiosInstance from "./axiosInstance";
@@ -15,48 +16,28 @@ const ResetPassword = () => {
 
   const handleReset = async (e) => {
     e.preventDefault();
-    setMessage("");
-    setError("");
+    setMessage(""); setError("");
 
-    if (!email || !token) {
-      setError("Invalid or expired reset link");
-      return;
-    }
-
-    if (!password || !confirmPassword) {
-      setError("All fields are required");
-      return;
-    }
-
-    if (password !== confirmPassword) {
-      setError("Passwords do not match");
-      return;
-    }
+    if (!email || !token) return setError("Invalid or expired reset link");
+    if (!password || !confirmPassword) return setError("All fields are required");
+    if (password !== confirmPassword) return setError("Passwords do not match");
 
     try {
       setLoading(true);
+      const res = await axiosInstance.post("/reset-password", { email, token, password });
 
-      const res = await axiosInstance.post("/reset-password", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, token, password }),
-      });
-
-      const data = await res.json();
-
-      if (res.ok) {
+      if (res.status === 200) {
         setMessage("Password reset successful!");
-        setPassword("");
-        setConfirmPassword("");
+        setPassword(""); setConfirmPassword("");
       } else {
-        setError(data.message || "Failed to reset password");
+        setError(res.data.message || "Failed to reset password");
       }
     } catch (err) {
       console.error(err);
       setError("Something went wrong");
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   };
 
   return (
@@ -65,20 +46,8 @@ const ResetPassword = () => {
       {message && <p style={{ ...styles.message, color: "green" }}>{message}</p>}
       {error && <p style={{ ...styles.message, color: "red" }}>{error}</p>}
       <form onSubmit={handleReset} style={styles.form}>
-        <input
-          type="password"
-          placeholder="New Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          style={styles.input}
-        />
-        <input
-          type="password"
-          placeholder="Confirm New Password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          style={styles.input}
-        />
+        <input type="password" placeholder="New Password" value={password} onChange={(e) => setPassword(e.target.value)} style={styles.input} />
+        <input type="password" placeholder="Confirm New Password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} style={styles.input} />
         <button type="submit" style={styles.button} disabled={loading}>
           {loading ? "Resetting..." : "Reset Password"}
         </button>

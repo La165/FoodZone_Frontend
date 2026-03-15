@@ -688,10 +688,13 @@ const cartSlice = createSlice({
         state.splice(index, 1);
       }
     },
+     clearCart: () => {
+      return [];
+    },
   },
 });
 
-export const { addToCart, decreaseQuantity, removeFromCart} =cartSlice.actions;
+export const { addToCart, decreaseQuantity, removeFromCart,clearCart} =cartSlice.actions;
 export const{applyCoupon}=couponSlice.actions;
 
 // Store.js

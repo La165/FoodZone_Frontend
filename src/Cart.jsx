@@ -295,6 +295,7 @@ import React, { useState, useMemo } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   addToCart,
+  clearCart,
   decreaseQuantity,
   removeFromCart,
 } from "./Store";
@@ -582,6 +583,7 @@ function Cart() {
                 axiosInstance
                   .post("/saveOrders", orderData)
                   .then(() => {
+                    dispatch(clearCart());
                     Swal.fire({
                       icon: "success",
                       title: "Order Placed Successfully!",

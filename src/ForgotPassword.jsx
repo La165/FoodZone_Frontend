@@ -1,3 +1,4 @@
+// ForgotPassword.jsx
 import React, { useState } from "react";
 import axiosInstance from "./axiosInstance";
 
@@ -8,35 +9,25 @@ const ForgotPassword = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!email) {
-      setMessage("Please enter your email");
-      return;
-    }
+    if (!email) return setMessage("Please enter your email");
 
     try {
       setLoading(true);
       setMessage("");
 
-      const res = await axiosInstance.post("/forgot-password", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
+      const res = await axiosInstance.post("/forgot-password", { email });
 
-      const data = await res.json();
-
-      if (res.ok) {
+      if (res.status === 200) {
         setMessage("Reset link sent to your email!");
       } else {
-        setMessage(data.message || "Failed to send reset email");
+        setMessage(res.data.message || "Failed to send reset email");
       }
-    } catch (error) {
-      console.error(error);
+    } catch (err) {
+      console.error(err);
       setMessage("Something went wrong");
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   };
 
   return (
