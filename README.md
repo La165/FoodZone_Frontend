@@ -1,16 +1,66 @@
-# React + Vite
+# Moonlight MERN E-Commerce Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack **MERN (MongoDB, Express, React, Node.js)** e-commerce application with user authentication, password reset, and cart management.  
+This project demonstrates a real-world SPA (Single Page Application) with secure backend APIs and responsive frontend.
 
-Currently, two official plugins are available:
+---
+🎯 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Frontend: https://food-zone-frontend.vercel.app
 
-## React Compiler
+## 🌟 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- User registration, login, and logout
+- Password reset via email
+- Product listing with dynamic cart management
+- SPA routing with React Router
+- RESTful APIs with Express.js
+- Responsive UI for desktop and mobile
+- JWT-based authentication and secure password hashing
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies Used
+
+- **Frontend:** React, React Router, Axios  
+- **Backend:** Node.js, Express.js  
+- **Database:** MongoDB  
+- **Authentication:** JWT (JSON Web Tokens)  
+- **Email Service:** Nodemailer or SMTP provider  
+- **Deployment:** Vercel (Frontend), Render/Heroku (Backend)  
+
+---
+
+## 📂 Project Structurefrontend/
+├─ public/
+├─ src/
+├─ components/
+├─ pages/
+├─ Home.jsx
+├─ Login.jsx
+├─ Cart.jsx
+├─ ResetPassword.jsx
+├─ App.jsx
+└─ index.js
+└─ package.json
+## 🚀 Installation
+
+### Frontend
+```bash
+git clone <repo-url>
+cd frontend
+npm install
+npm start       # for development
+npm run build   # for production
+**Deployment**
+Frontend (Vercel)
+
+Make sure vercel.json is set for SPA routing:
+
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
+
+
