@@ -1,4 +1,4 @@
-# Moonlight MERN E-Commerce Project
+# FoodZone MERN E-Commerce Project
 
 A full-stack **MERN (MongoDB, Express, React, Node.js)** e-commerce application with user authentication, password reset, and cart management.  
 This project demonstrates a real-world SPA (Single Page Application) with secure backend APIs and responsive frontend.
